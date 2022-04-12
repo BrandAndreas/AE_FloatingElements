@@ -9,10 +9,25 @@ var tabbedPanel = window.add("tabbedpanel", undefined, "");
 var tabOne = tabbedPanel.add("tab", undefined, "Tab1");
 tabOne.orientation = "column";
 var logoImage = tabOne.add("image", undefined, logoBinary);
-var text = tabOne.add("statictext", undefined, "")
+var text = tabOne.add("statictext", undefined, "My text");
+var checkbox = tabOne.add("checkbox", undefined, "Checkbox");
+var radio = tabOne.add("radiobutton", undefined, "Radio 1");
+var buttonGroup = tabOne.add("group", undefined, "");
+buttonGroup.orientation = "row";
+var buttonOne = buttonGroup.add("button", undefined, "Button 1");
+var buttonTwo = buttonGroup.add("button", undefined, "Button 2");
 
 var tabTwo = tabbedPanel.add("tab", undefined, "Tab2");
 tabTwo.orientation = "column";
+var panel = tabTwo.add("panel", undefined, "My Panel");
+var slider = panel.add("slider", undefined, "");
+slider.value = 50;
+var dd = panel.add("dropdownlist", undefined, ["item1", "item2", "item2"]);
+dd.selection = 0;
+dd.size = [150, 25];
+var panelTwo = tabTwo.add("panel", undefined, "");
+var iconButtonOne = panelTwo.add("iconbutton", undefined, "~/Desktop/rightArrow.png");
+var iconButtonTwo = panelTwo.add("iconbutton", undefined, "~/Pictures/UpArrow.png");
 
 window.center();
 window.show();
